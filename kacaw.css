@@ -1,0 +1,387 @@
+/* === RESET & GLOBAL === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  line-height: 1.6;
+}
+
+/* Header */
+.cukimay {
+  background: rgba(18, 18, 18, 0.9); /* Dark background */
+  color: #f0f0f0; /* Light text color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Darker shadow */
+  padding: 1.2rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.6s ease;
+}
+
+/* Efek transisi saat scroll */
+.sticky #memoriesHeader {
+  transform: translateX(-47%);
+  font-size: 1.4rem;
+  color: #a5a4a4;
+  transition: transform 0.6s ease;
+}
+
+/* Teks di header */
+#memoriesHeader {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.6s ease, font-size 0.6s ease, text-align 0.6s ease;
+}
+
+/* === SECTION UMUM === */
+.section1, .section2, .section3 {
+  background-color: #1c1c1c; /* Dark background */
+}
+
+.section1 .teks, .section2 .teks, .overlay-text {
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly dark background for text */
+  color: #e0e0e0; /* Light text color */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+.section1, .section2 {
+  position: relative;
+  padding: 6rem 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.section1 .p1 img,
+.section2 .p1.reverse img {
+  transition: transform 0.3s ease;
+}
+
+.section1 .p1 img:hover,
+.section2 .p1.reverse img:hover {
+  transform: scale(1.05);
+}
+
+.section1 {
+  background-color: #1c1c1c;
+}
+
+.section2 {
+  background-color: #1c1c1c;
+}
+
+/* === SECTION 1 LAYOUT KHUSUS === */
+.section1 .p1 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.section1 .p1 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.section1 .teks {
+  flex: 1;
+  font-size: 1rem;
+  background-color: #3e3e3e;
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  animation: fadeInText 1s ease-out;
+}
+
+/* === SECTION 2 STYLE PERCAPAKAN === */
+.section2 .p1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.section2 .p1 img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  animation: floatPhoto 4s ease-in-out infinite alternate;
+}
+
+.section2 .teks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 40px;
+}
+
+.section2 .teks p {
+  background: rgba(102, 100, 100, 0.85);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  margin: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section2 .teks p:nth-child(odd) {
+  border-radius: 20px 20px 5px 20px;
+}
+
+.section2 .teks p:nth-child(even) {
+  border-radius: 20px 20px 20px 5px;
+}
+
+.section2 .teks p:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(7, 207, 177, 0.12);
+}
+
+/* === EFEK MELAYANG KACAU === */
+@keyframes floatPhoto {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes floatUpLeft {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-12px) translateX(-8px); }
+}
+
+@keyframes floatUpRight {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-12px) translateX(8px); }
+}
+
+@keyframes floatUpCenter {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+.section2 .teks p:nth-child(3n+1) { animation: floatUpLeft 5s ease-in-out infinite alternate; }
+.section2 .teks p:nth-child(3n+2) { animation: floatUpRight 5s ease-in-out infinite alternate; }
+.section2 .teks p:nth-child(3n)   { animation: floatUpCenter 5s ease-in-out infinite alternate; }
+
+.section3 {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+
+.left-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: transparent; /* Pastikan tidak ada background hitam */
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mengisi area tanpa memotong video */
+  border-radius: 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+  font-size: 1.1rem;
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.right-bg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Kontainer untuk gambar yang akan di slide */
+.sliding-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliding-images .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slide 12s infinite ease-in-out;
+  border-radius: 25px; /* Sudut membulat */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan halus */
+  transition: opacity 1s ease-in-out, transform 0.6s ease;
+}
+
+/* Animasi sliding tiap gambar satu-satu */
+.sliding-images .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.sliding-images .slide:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.sliding-images .slide:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.sliding-images .slide:nth-child(4) {
+  animation-delay: 9s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  35% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+
+/*--Button--*/
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.next-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.next-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 767px) {
+  .section1, .section2 {
+  flex-direction: column;
+  padding: 2rem 1rem;
+  }
+  
+  .section1 .p1,
+  .section2 .p1 {
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .section1 .teks, .section2 .teks {
+  font-size: 1rem;
+  width: 100%;
+  }
+  
+  .section2 .p1 img {
+  max-width: 90%;
+  }
+  
+  .left-video, .right-bg {
+  max-width: 100%;
+  flex: 1 1 100%;
+  height: auto;
+  }
+  
+  .video-wrapper {
+  aspect-ratio: auto;
+  height: auto;
+  }
+  
+  .overlay-text {
+  font-size: 1rem;
+  padding: 1.2rem;
+  }
+  }

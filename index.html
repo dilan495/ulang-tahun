@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alyarein - Happy Birthday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="cukimay" id="page">
+    <h1>🎂 Happy Birthday, Alya! 🎉</h1>
+    <div class="rocket">
+      <button class="star-button" id="rocketButton">Klik untuk kejutan 🎁</button>
+    </div>
+    <p class="highlighted-text">Note!(nikmatin setiap halamannya)</>
+  </div>
+
+  <script>
+    const button = document.getElementById('rocketButton');
+    const page = document.getElementById('page');
+
+    button.addEventListener('click', () => {
+      // Tambahkan animasi fade-out ketika tombol diklik
+      page.classList.add('fade-out');
+
+      // Tunggu hingga animasi selesai, baru pindah halaman
+      page.addEventListener('animationend', () => {
+        localStorage.setItem('allowPlayWithSound', 'yes');
+        window.location.href = "surprise.html"; // Pindah ke halaman surprise
+      });
+    });
+  </script>
+</body>
+</html>

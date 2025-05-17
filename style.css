@@ -1,0 +1,103 @@
+/* Efek transisi fade-out */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('img/kenduri1.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+  overflow: hidden;
+}
+
+.cukimay {
+  text-align: center;
+  background: rgba(147, 143, 143, 0.8); /* Efek transparansi untuk teks */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-out;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0086b3;
+}
+
+.highlighted-text {
+  color: #ff2600; /* Ganti warna sesuai keinginan */
+}
+
+.rocket {
+  margin: 1.5rem 0;
+}
+
+.star-button {
+  font-size: 2rem;
+  background-color: #ffcc00;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: url(icons8-rocket-40.png), auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.star-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.launching {
+  animation: launch 0.6s ease forwards;
+}
+
+@keyframes launch {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4) rotate(10deg); }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Untuk memastikan halaman memudar sebelum pindah */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

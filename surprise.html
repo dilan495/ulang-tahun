@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harapan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="surprise.css" />
+</head>
+<body>
+
+    <video id="bg-video" autoplay loop playsinline muted>
+        <source src="img/nyanyi.mp4" type="video/mp4" />
+        Browser kamu tidak mendukung video.
+      </video>
+         
+  <!-- ISI PESAN -->
+  <div class="message-page slide-in">
+    <img src="img/alya3.jpg" alt="Foto Dia" class="profile-photo" />
+
+    <h1><strong>Ini Untuk Alya</strong></h1>
+    </p><p class="personal-message">
+        Hari ini tuh bukan cuma sekadar tanggal di kalender. Buat gua, ini hari yang penting banget. Kenapa? Karena di hari ini, seseorang yang super berharga kayak lu lahir ke dunia.
+        <br><br>
+        Gua nggak tau apa lu sadar atau nggak, tapi kehadiran lu tuh punya pengaruh besar. Cara lu ngomong, ketawa, nanggepin hal kecil, atau bahkan cuma duduk diem  semuanya punya vibe yang bikin orang di sekitar lu ngerasa lebih nyaman. Lu punya cara sendiri buat bikin dunia jadi lebih baik, dan itu nggak semua orang bisa.
+        <br><br>
+        Gua seneng bisa kenal lu. Bisa ngobrol, bisa ketawa bareng, bisa denger cerita-cerita random lu yang kadang nyebelin tapi ngangenin. Hidup ini tuh nggak selalu mulus, gua tau banget. Tapi liat lu tetep berdiri, tetap jadi diri sendiri, itu bikin gua salut.
+        <br><br>
+        Lu tuh kuat, walau kadang suka ngerasa rapuh. Lu tuh keren, walau mungkin sering ngerasa biasa aja. Tapi buat gua, lu itu beda. Lu itu versi lu sendiri yang nggak bisa digantiin siapa pun.
+        <br><br>
+        Jadi di ulang tahun lu ini, gua cuma pengen lu inget satu hal: lu pantes bahagia. Pantes dicintai, pantes dihargai, pantes ngerasa cukup. Jangan terlalu keras sama diri sendiri ya. Nikmatin aja prosesnya, meski kadang chaos.
+        <br><br>
+        Selamat ulang tahun ya. Semoga semua hal baik dateng ke hidup lu yang lu harap-harapin, yang nggak disangka-sangka, semua deh. Dan gua harap, gua masih bisa jadi bagian dari perjalanan itu.
+        <br><br>
+        Tetap jadi lu. Karena lu yang sekarang itu udah keren banget.
+        <br><br>
+        ✨ Happy Birthday 🤍
+      </p>       
+
+    <a href="kece.html" class="next-button">lanjut yukk</a>
+  </div>
+
+  <script>
+    const video = document.getElementById('bg-video');
+  
+    // Cek apakah sudah pernah diizinkan
+    const allowed = localStorage.getItem('allowPlayWithSound');
+  
+    if (allowed === 'yes') {
+      video.muted = false;
+      video.play().catch(err => console.log('Gagal play video:', err));
+    }
+  
+    // Saat user klik di mana pun, aktifkan suara dan simpan preferensi
+    document.addEventListener('click', () => {
+      if (!video.paused && video.muted) {
+        video.muted = false;
+        video.play().catch(err => console.log('Gagal play video:', err));
+        localStorage.setItem('allowPlayWithSound', 'yes');
+      }
+    });
+  </script>  
+
+</body>
+</html> 

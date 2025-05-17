@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tentang Alya - Cerita Personal" />
+  <meta name="keywords" content="alya, cerita, pribadi" />
+  <meta name="author" content="Dulunn" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="kacaw.css" rel="stylesheet" />
+  <title>Alya</title>
+</head>
+<body>
+  <!-- Header -->
+  <div class="cukimay" id="headerBox">
+    <header id="memoriesHeader">Hallo Alya</header>
+  </div>
+
+  <!-- SECTION 1 -->
+  <section class="section1">
+    <div class="p1">
+      <img src="img/alya.jpg" alt="Foto Alya" />
+      <div class="teks">
+        <p><strong>Alya Reinatha</strong></p>
+        <p>Dia bukan cuma sekadar nama di kontak gua, tapi satu dari sedikit orang yang kehadirannya bisa ngubah hari biasa jadi luar biasa.</p>
+        <p>Senyumnya tuh bisa bikin lupa masalah, caranya ngomong tuh selalu bikin tenang, dan tatapan matanya? Kayak coklat manis bangett.</p>
+        <p><b>Alya itu tipe orang yang kalau udah sayang,</b> dia bakal tulus banget. Bukan yang cuma hadir di saat senang, tapi juga yang peluk kamu saat dunia terasa berat.</p>
+        <p>Dia gak cuma manis di luar, tapi juga hangat di dalam. Bareng dia, segalanya terasa lebih hidup.</p>
+        <p>Kalau boleh jujur, dia tuh bukan cuma cerita, dia tuh harapan. Dan setiap kenangan bareng dia... selalu jadi bagian paling indah dari hidup gua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section2 zoomable-section fade-in" id="section2">
+    <div class="bg-layer"></div>
+    <div class="p1">
+      <img src="img/alya2.jpg" alt="Foto Alya" />
+      <div class="teks">
+        <p><strong>Alya Tuh...</strong></p>
+        <p>bisa bikin hal kecil jadi berasa spesial. Dari cara dia bilang “semangat yaa”, sampe senyumnya yang muncul tiba-tiba waktu gua lagi banyak pikiran.</p>
+        <p>Kadang hal-hal receh kayak denger dia cerita soal harinya aja udah cukup bikin gua senyum-senyum sendiri. Nggak selalu harus serius, kadang becanda-becandanya malah yang bikin nagih.</p>
+        <p>Yang paling gua suka, dia tuh selalu punya cara buat ngebawa suasana jadi lebih ringan. Gak harus jadi orang paling ngerti gua juga, cukup jadi dirinya sendiri aja... itu udah bikin nyaman.</p>
+        <p>Dan dari semua obrolan, ketawa, bahkan diam bareng yang pernah gua lewatin sama dia, kayaknya gak ada yang sia-sia. Selalu ada aja bagian kecil yang gua simpen baik-baik.</p>
+        <p><strong>Kalo Bareng Alya Tuh Selalu Ada Cerita Hal-hal Random.</strong></p>
+        <p>“Dari bacain spanduk ditiap sudut jalan.”</p>
+        <p>“Terus ngetawain apa yang ada dijalan.”</p>
+        <p>Dan gua? Gua cuma duduk, dengerin, sambil dalam hati mikir: <em>seneng banget bisa denger dia, walau sesimpel itu.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="section3">
+    <div class="left-video">
+      <div class="video-wrapper">
+        <video class="video" autoplay loop>
+          <source src="img/nyanyi1.mp4" type="video/mp4">
+          Browser kamu tidak mendukung tag video.
+        </video>
+      </div>
+      <div class="overlay-text">
+        <p><strong>Dan dari semua hal tentang Alya...</strong></p>
+        <p style="opacity: 0.85;">Gua gak selalu bisa jelasin kenapa dia segitu spesialnya. Kadang cuma karena senyum kecil, atau cara dia nyebut nama gua aja, udah cukup buat bikin hari jadi lebih berarti.</p>
+        <p>Rasanya kayak... ada seseorang yang selalu berhasil bikin semuanya terasa lebih hangat, bahkan di hari yang paling ngebosenin sekalipun.</p>
+        <p>Dari obrolan receh sampai hal-hal yang gak penting tapi kita ketawain bareng, semuanya punya tempat sendiri di kepala gua.</p>
+        <p>Bahkan hal-hal kecil, kayak dia nyanyi atau cerita tentang harinya, entah kenapa selalu gua inget.</p>
+        <p>Jadi, kalau lo penasaran kenapa gua bisa cerita sejauh ini, jawabannya simple: karena semua yang bareng Alya tuh... layak buat disimpen. Layak buat diinget. Dan gua pengen nunjukin itu semua.</p>
+      </div>
+    </div>
+    <div class="right-bg">
+      <div class="sliding-images">
+        <img class="slide" src="img/alya4.jpg" alt="Image 1">
+        <img class="slide" src="img/alya5.jpg" alt="Image 2">
+        <img class="slide" src="img/alya6.jpg" alt="Image 3">
+        <img class="slide" src="img/alya7.jpg" alt="Image 4">
+      </div>
+      
+  </div>
+</section>
+
+  <!-- BUTTON LANJUT KE MEMORI -->
+  <div style="text-align: center; ">
+    <a href="memories.html" id="unmuteBtn" class="next-button" aria-label="Lihat halaman kenangan Alya">Lihat Kenangan 📸</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">© 2025 Dulunn, All rights reserved.</footer>
+
+  <!-- SCRIPT -->
+  <script>
+    window.addEventListener("scroll", function () {
+  // Handle sticky header
+  const headerBox = document.getElementById("headerBox");
+  if (window.scrollY > 50) {
+    headerBox.classList.add("sticky");
+  } else {
+    headerBox.classList.remove("sticky");
+  }
+
+  const nextButton = document.querySelector('.next-button');
+const target = document.querySelector('.section3'); // Atau ganti ke section mana pun
+
+window.addEventListener('scroll', function () {
+  const rect = target.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    nextButton.classList.add('show');
+  } else {
+    nextButton.classList.remove('show');
+  }
+});
+
+  document.getElementById('unmuteBtn').addEventListener('click', () => {
+    localStorage.setItem('unmute', 'true');
+  });
+
+  // Handle tombol "Lanjut" tampil saat section3 terlihat
+  var targetSection = document.querySelector('.section3');  // Ganti ke section3
+  var button = document.querySelector('.next-button');
+  var section3Rect = section3.getBoundingClientRect(); // Ambil posisi section3
+  if (section3Rect.top <= window.innerHeight) {  // Jika section3 terlihat
+    button.classList.add('show'); // Tampilkan tombol
+  } else {
+    button.classList.remove('show'); // Sembunyikan tombol
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+  const sections = document.querySelectorAll('.section1, .section2');
+  const zoomOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('zoom');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+  sections.forEach(section => zoomOnScroll.observe(section));
+});
+
+document.body.style.opacity = 0;
+window.addEventListener('load', () => {
+  document.body.style.transition = 'opacity 1.5s ease';
+  document.body.style.opacity = 1;
+});
+
+// Auto scroll text
+const overlay = document.querySelector('.overlay-text');
+let scrollPos = 0;
+let speed = 0.3;
+
+function autoScrollText() {
+  if (!overlay) return;
+  scrollPos += speed;
+
+  if (scrollPos > overlay.scrollHeight - overlay.clientHeight) {
+    scrollPos = 0; // restart scroll
+  }
+
+  overlay.scrollTop = scrollPos;
+  requestAnimationFrame(autoScrollText);
+}
+
+window.addEventListener('load', () => {
+  requestAnimationFrame(autoScrollText);
+});
+
+// Efek header bergerak dari tengah ke kiri saat scroll
+window.addEventListener("scroll", function () {
+  const headerBox = document.getElementById("headerBox");
+  if (window.scrollY > 50) {
+    headerBox.classList.add("sticky"); // Tambahkan kelas sticky untuk efek geser
+  } else {
+    headerBox.classList.remove("sticky");
+  }
+
+  // Menampilkan tombol saat section3 terlihat
+  var section3 = document.querySelector('.section3'); 
+  var button = document.querySelector('.next-button');
+  var section3Rect = section3.getBoundingClientRect(); 
+  if (section3Rect.top <= window.innerHeight) {
+    button.classList.add('show');
+  } else {
+    button.classList.remove('show');
+  }
+});
+
+// Pastikan tombol hanya muncul ketika section3 terlihat
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+});
+
+  // Simpan preferensi agar video bisa auto-unmute di halaman selanjutnya
+  document.getElementById('unmuteBtn').addEventListener('click', () => {
+    localStorage.setItem('unmute', 'true');
+  });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+}
+
+#intro.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+#galeri {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 40px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+#galeri.show {
+  opacity: 1;
+}
+
+.memori-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;             /* Bikin kotak persegi */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+video.memori-item {
+  max-width: 100%;
+  height: auto;
+}
+
+.memori-wrap {
+  display: contents;
+}

@@ -1,0 +1,101 @@
+/* Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6) blur(4px); /* Tambahkan blur agar teks lebih jelas */
+}
+
+/* ISI PESAN */
+.message-page {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(190, 186, 186, 0.7);
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 5rem auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+/* FOTO */
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: rgba(190, 186, 186, 0.7);
+}
+
+/* TEKS */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000; /* Warna hangat untuk judul */
+    margin-bottom: 1rem;
+    animation: fadeInText 1.2s ease-out;
+}
+
+.personal-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000000;
+    margin-top: 2rem;
+    animation: fadeInText 1.5s ease-out;
+}
+
+/* Animasi fade-in untuk teks */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMASI SLIDE */
+.slide-in {
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* BUTTON LANJUT */
+.next-button {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #f8b500;
+    transform: scale(1.1); /* Membuat tombol sedikit lebih besar saat di hover */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
